@@ -2,8 +2,8 @@ services:
 
   apiapp_c:
     build: ./apiapp
-    ports:
-      - 888:5000
+    #ports:
+    #  - 888:5000
 
   webapp_c:
     depends_on:
