@@ -16,4 +16,4 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_SECRET_KEY }}" >  ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa namvu@34.143.236.100 sh -c "pwd; ls -a"
+          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa nam@34.143.236.100 sh -c "pwd; ls -a"
