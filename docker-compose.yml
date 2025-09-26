@@ -1,0 +1,13 @@
+services:
+
+  apiapp_c:
+    build: ./apiapp
+    ports:
+      - 888:5000
+
+  webapp_c:
+    build: ./webapp
+    ports:
+      - 889:5000
+    environment:
+      - NAME=${NAME}
