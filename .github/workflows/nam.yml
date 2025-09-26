@@ -1,0 +1,19 @@
+name: namci
+
+on:
+  push:
+    branches: [ "cinam" ]
+
+  workflow_dispatch:
+
+jobs:
+  nam_build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: nam remote exec ssh
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_SECRET_KEY }}" >  ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa namvu@34.143.236.100 sh -c "pwd; ls -a"
