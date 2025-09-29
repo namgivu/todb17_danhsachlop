@@ -23,8 +23,12 @@ jobs:
           
             echo '--- git clone code ve neu chua clone'
             mkdir -p ~/_/cinam
-            #cd       ~/_/cinam ; git clone git@github.com:namgivu/todb17_danhsachlop.git  
-            echo TODO xet neu chua clone
+          
+            if [ ! -d ~/_/cinam/todb17_danhsachlop/.git ]; then
+              cd      ~/_/cinam ; git clone git@github.com:namgivu/todb17_danhsachlop.git  
+            else
+              echo 'Repo da ton tai, bo qua git clone'
+            fi
 
             echo
             echo '--- git pull code ve de lay moi nhat'
