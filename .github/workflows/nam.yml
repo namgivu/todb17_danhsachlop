@@ -36,5 +36,7 @@ jobs:
             git checkout cinam ; git fetch origin ; git reset --hard origin/cinam
 
             echo
-            echo '--- TODO chay composeup'
+            echo '--- chay composeup'
+            cd ~/_/cinam/todb17_danhsachlop 
+            webapp_port=8022 ./composeup.sh
           "
