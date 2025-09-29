@@ -19,13 +19,16 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           
           ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa nam@34.143.236.100 sh -c "
+            set -x  # print the executed  
+          
             echo '--- git clone code ve neu chua clone'
             mkdir -p ~/_/cinam
             #cd       ~/_/cinam ; git clone git@github.com:namgivu/todb17_danhsachlop.git  
-            echo #TODO xet neu chua clone
+            echo TODO xet neu chua clone
 
             echo
             echo '--- git pull code ve de lay moi nhat'
+            cd ~/_/cinam 
             git checkout cinam ; git fetch origin ; git reset --hard origin/cinam
 
             echo
