@@ -11,15 +11,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  DUY_build:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Duylejv1
-        run: echo Hello, This is a Job1
+      - name: DuyleSSH
+      - run: |
+          ssh -i ~/.ssh/id_rsa duy@34.143.236.100 sh -c 'pwd:ls-a' 
 
-      - name: DuyleJv2
-        run: |
-          echo This is a job2,
