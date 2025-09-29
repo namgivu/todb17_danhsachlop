@@ -28,7 +28,7 @@ jobs:
 
             echo
             echo '--- git pull code ve de lay moi nhat'
-            cd ~/_/cinam 
+            cd ~/_/cinam/todb17_danhsachlop 
             git checkout cinam ; git fetch origin ; git reset --hard origin/cinam
 
             echo
