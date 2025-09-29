@@ -19,7 +19,7 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           
           ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa nam@34.143.236.100 sh -c "
-            pwd; 
-            ls -a;
-            echo test
+            echo 'TODO git clone code ve neu chua clone'
+            echo 'TODO git pull code ve de lay moi nhat'
+            echo 'TODO chay composeup'
           "
