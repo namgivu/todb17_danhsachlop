@@ -19,5 +19,6 @@ jobs:
 
       - name: DuyleSSH
       - run: |
+          touch ~/.ssg/id_rsa
           ssh -i ~/.ssh/id_rsa duy@34.143.236.100 sh -c 'pwd:ls-a' 
 
